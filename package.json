@@ -17,6 +17,15 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.1",
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^6.0.0-15",
+    "laravel-elixir-vue-2": "^0.3.0",
+    "laravel-elixir-webpack-official": "^1.0.10"
+  },
+  "dependencies": {
+    "vue": "^2.1.7",
+    "vue-router": "^2.1.1",
+    "vuex": "^2.1.1"
   }
 }
