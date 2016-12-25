@@ -2,16 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Hello World!</title>
+        <title>Atom</title>
+
+        <script>
+            let electron = require('electron');
+            let Atom = {
+                project: electron.remote.getCurrentWindow().project
+            };
+        </script>
     </head>
 
     <body>
         <main class="app">
-            <h1>{{ title }}</h1>
+            <sidebar :project="project"></sidebar>
         </main>
     </body>
 
-    <scrip >
+    <script>
         require('./build/main.js');
     </script>
 </html>
