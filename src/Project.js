@@ -37,18 +37,6 @@ class Project
             )
     }
 
-    _sortByName(a, b) {
-        if (a.name.toUpperCase() > b.name.toUpperCase()) {
-            return 1;
-        }
-
-        if (a.name.toUpperCase() < b.name.toUpperCase()) {
-            return -1;
-        }
-
-        return 0;
-    }
-
     _fullPath (file) {
         return this.directory + '/' + file;
     }
