@@ -15,7 +15,7 @@ let mainWindow
 
 function createWindow () {
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 800, height: 600})
+    mainWindow = new BrowserWindow({width: 800, height: 600, frame: false})
 
     BrowserWindow.addDevToolsExtension('/Users/jaggy/Library/Application Support/Google/Chrome/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/2.3.1_0');
 
@@ -27,7 +27,7 @@ function createWindow () {
         protocol: 'file:',
         slashes: true
     }))
-
+    
     // Open the DevTools.
     mainWindow.webContents.openDevTools()
 

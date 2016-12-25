@@ -1,0 +1,498 @@
+// Turn off antialiasing for Mac OS
+.thicken{
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+// Accentuate an icon's edges
+.sharpen{
+    text-shadow: 0 0 0;
+}
+
+/*============================================================================*
+  Octicons
+  https://github.com/github/octicons
+/*============================================================================*/
+.octicons { font-family: "Octicons Regular"; font-size: medium; text-align: center; }
+
+.binary-icon          { @extend .octicons; content: "\f094"; }
+.book-icon            { @extend .octicons; content: "\f007"; }
+.brew-icon            { @extend .octicons; content: "\f069"; font-size: 15px; left: 1px; }
+.checklist-icon       { @extend .octicons; content: "\f076"; }
+.code-icon            { @extend .octicons; content: "\f05f"; }
+.comment-icon         { @extend .octicons; content: "\f02b"; }
+.database-icon        { @extend .octicons; content: "\f096"; }
+.gear-icon            { @extend .octicons; content: "\f02f"; }
+.git-commit-icon      { @extend .octicons; content: "\f01f"; }
+.git-merge-icon       { @extend .octicons; content: "\f023"; }
+.github-icon          { @extend .octicons; content: "\f00a"; }
+.graph-icon           { @extend .octicons; content: "\f043"; }
+.image-icon           { @extend .octicons; content: "\f012"; }
+.key-icon             { @extend .octicons; content: "\f049"; }
+.link-icon            { @extend .octicons; content: "\f0b0"; }
+.markdown-icon        { @extend .octicons; content: "\f0c9"; }
+.package-icon         { @extend .octicons; content: "\f0c4"; }
+.ruby-icon            { @extend .octicons; content: "\f047"; }
+.secret-icon          { @extend .octicons; content: "\f08c"; }
+.squirrel-icon        { @extend .octicons; content: "\f0b2"; font-size: 15px; }
+.text-icon            { @extend .octicons; content: "\f011"; }
+.xml-icon             { @extend .octicons; content: "\f010"; }
+.zip-icon             { @extend .octicons; content: "\f013"; }
+
+
+
+/*============================================================================*
+  FontAwesome
+  http://fortawesome.github.io/Font-Awesome/cheatsheet
+/*============================================================================*/
+.fa { font-family: "FontAwesome"; font-size: small; text-align: center; }
+
+.android-icon         { @extend .fa; content: "\f17b"; font-size: 16px; }
+.audio-icon           { @extend .fa; content: "\f028"; font-size: 15px; }
+.bullhorn-icon        { @extend .fa; content: "\f0a1"; font-size: 16px; }
+.calc-icon            { @extend .fa; content: "\f1ec"; font-size: 14px; }
+.coffee-icon          { @extend .fa; content: "\f0f4"; }
+.css3-icon            { @extend .fa; content: "\f13c"; }
+.circle-icon          { @extend .fa; content: "\f111"; font-size: 16px; }
+.earth-icon           { @extend .fa; content: "\f0ac"; font-size: 15px; }
+.gears-icon           { @extend .fa; content: "\f085"; font-size: 15px; }
+.html5-icon           { @extend .fa; content: "\f13b"; }
+.mobile-icon          { @extend .fa; content: "\f10b"; font-size: 20px; top: 2px; }
+.moon-icon            { @extend .fa; content: "\f186"; font-size: 16px; top: 1px; }
+.music-icon           { @extend .fa; content: "\f001"; font-size: 15px; left: -1px; }
+.recycle-icon         { @extend .fa; content: "\f1b8"; font-size: 15px; top: 3px; }
+.rss-icon             { @extend .fa; content: "\f143"; font-size: 16px; }
+.smarty-icon          { @extend .fa; content: "\f0eb"; font-size: 15px; }
+.sourcemap-icon       { @extend .fa; content: "\f279"; }
+.sun-icon             { @extend .fa; content: "\f185"; font-size: 14px; @extend .thicken; }
+.toc-icon             { @extend .fa; content: "\f03a"; font-size: 15px; top: 2px; }
+.twig-icon            { @extend .fa; content: "\f1bb"; }
+.twitter-icon         { @extend .fa; content: "\f099"; }
+
+
+
+/*============================================================================*
+  Mfizz
+  http://mfizz.com/oss/font-mfizz
+/*============================================================================*/
+.mf { font-family: "FontMfizz"; font-size: small; text-align: center;  }
+
+.apache-icon          { @extend .mf; content: "\f102"; top: 3px; left: 0; }
+.c-icon               { @extend .mf; content: "\f106"; }
+.cpp-icon             { @extend .mf; content: "\f10b"; }
+.csharp-icon          { @extend .mf; content: "\f10c"; }
+.debian-icon          { @extend .mf; content: "\f111"; }
+.elixir-icon          { @extend .mf; content: "\f113"; }
+.gnome-icon           { @extend .mf; content: "\f119"; font-size: 20px; left: 1px; top: 5px; }
+.h-icon               { @extend .mf; content: "\f010"; }
+.haskell-icon         { @extend .mf; content: "\f121"; }
+.java-icon            { @extend .mf; content: "\f126"; font-size: medium; left: 2px; top: 2px; }
+.js-icon              { @extend .mf; content: "\f129"; top: 2px; font-size: 18px; left: 1px; }
+.objc-icon            { @extend .mf; content: "\f13e"; font-size: medium; }
+.osx-icon             { @extend .mf; content: "\f141"; left: 2px; }
+.perl-icon            { @extend .mf; content: "\f142"; }
+.python-icon          { @extend .mf; content: "\f14c"; font-size: medium; left: 1px; }
+.red-hat-icon         { @extend .mf; content: "\f14e"; }
+.scala-icon           { @extend .mf; content: "\f154"; left: 3px; top: 2px; font-size: medium; }
+.sql-icon             { @extend .mf; content: "\f10e"; left: 2px; }
+.svg-icon             { @extend .mf; content: "\f15c"; }
+.tsql-icon            { @extend .mf; content: "\f136"; font-size: medium; left: 2px;}
+.tt-icon              { @extend .mf; content: "TT";    }
+
+
+
+/*============================================================================*
+  IcoMoon's default icon library
+  https://icomoon.io/#preview-free
+/*============================================================================*/
+.icomoon { font-family: "icomoon"; font-size: 18px; text-align: center; top: 3px; }
+
+.grunt-icon           { @extend .icomoon; content: "\e611"; }
+.gulp-icon            { @extend .icomoon; content: "\e610"; }
+.mustache-icon        { @extend .icomoon; content: "\e60f"; }
+
+
+
+
+/*============================================================================*
+  Devicons
+  http://vorillaz.github.io/devicons
+/*============================================================================*/
+.devicons { font-family: "devicons"; font-size: large; text-align: center; top: 3px; }
+
+.asp-icon             { @extend .devicons; content: "\e67f"; }
+.atom-icon            { @extend .devicons; content: "\e664"; font-size: 18px; left: -2px; top: 4px; @extend .thicken; }
+.bower-icon           { @extend .devicons; content: "\e64d"; @extend .sharpen; }
+.clojure-icon         { @extend .devicons; content: "\e668"; @extend .thicken; }
+.dart-icon            { @extend .devicons; content: "\e698"; }
+.dlang-icon           { @extend .devicons; content: "\e6af"; }
+.eclipse-icon         { @extend .devicons; content: "\e69e"; }
+.erlang-icon          { @extend .devicons; content: "\e6b1"; }
+.fsharp-icon          { @extend .devicons; content: "\e6a7"; left: 1px; }
+.heroku-icon          { @extend .devicons; content: "\e67b"; }
+.laravel-icon         { @extend .devicons; content: "\e63f"; @extend .thicken; }
+.node-icon            { @extend .devicons; content: "\e618"; font-size: 18px; left: -1px; }
+.pod-icon             { @extend .devicons; content: "\e669"; font-size: 18px; left: -1px; }
+.prolog-icon          { @extend .devicons; content: "\e6a1"; font-size: 18px; left: -1px; top: 4px; }
+.rails-icon           { @extend .devicons; content: "\e63b"; }
+.sass-icon            { @extend .devicons; content: "\e64b"; }
+.swift-icon           { @extend .devicons; content: "\e655"; font-size: large; }
+.travis-icon          { @extend .devicons; content: "\e67e"; font-size: medium; }
+.unity3d-icon         { @extend .devicons; content: "\e621"; font-size: 18px; left: -2px; }
+.vb-icon              { @extend .devicons; content: "\e60c"; font-size: 18px; }
+.vim-icon             { @extend .devicons; content: "\e6c5"; }
+.windows-icon         { @extend .devicons; content: "\e60f"; }
+.yeoman-icon          { @extend .devicons; content: "\e67a"; left: -1px; }
+
+.git-icon {
+  @extend .devicons;
+  content: "\e602";
+  top: 4px;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0.85px;
+  -webkit-transform: scale(1.15, 1.10);
+}
+
+.rust-icon {
+  @extend .devicons;
+  content: "\e6a8";
+  font-size: 22px;
+  line-height: .7;
+  top: 5px;
+  margin-right: 5px;
+  left: -1px;
+}
+
+
+
+/*============================================================================*
+  Custom file icons
+  See CONTRIBUTING.md
+/*============================================================================*/
+.file-icons         { font-family: "file-icons"; font-size: large; text-align: center; top: 2px; }
+
+.1c-icon            { @extend .file-icons; content: "\a5ea"; font-size: 16px; top: 3px; }
+.abap-icon          { @extend .file-icons; content: "\e92b"; font-size: 15px; }
+.access-icon        { @extend .file-icons; content: "\e9ea"; font-size: 15px; }
+.ada-icon           { @extend .file-icons; content: "\e90b"; font-size: 17px; }
+.ae-icon            { @extend .file-icons; content: "\e9f3"; font-size: 15px; }
+.ahk-icon           { @extend .file-icons; content: "\e932"; font-size: 15px; }
+.ai-icon            { @extend .file-icons; content: "\e6b4"; font-size: 15px; }
+.alloy-icon         { @extend .file-icons; content: "\e935"; font-size: 15px; }
+.alpine-icon        { @extend .file-icons; content: "\e9ff"; font-size: 16px; }
+.ampl-icon          { @extend .file-icons; content: "\e94e"; font-size: 16px; top: 3px; left: 1px; }
+.amx-icon           { @extend .file-icons; content: "\e99b"; font-size: 16px; top: 3px; }
+.ant-icon           { @extend .file-icons; content: "\e93e"; font-size: 18px; top: 4px; transform: scale(1.1); }
+.antlr-icon         { @extend .file-icons; content: "\e92c"; font-size: 15px; top: 3px; }
+.api-icon           { @extend .file-icons; content: "\e92d"; font-size: 15px; }
+.apl-icon           { @extend .file-icons; content: "\234b"; font-size: 15px; }
+.apple-icon         { @extend .file-icons; content: "\e925"; font-size: 15px; }
+.appveyor-icon      { @extend .file-icons; content: "\e923"; font-size: 15px; }
+.arc-icon           { @extend .file-icons; content: "\e92f"; font-size: 15px; }
+.archlinux-icon     { @extend .file-icons; content: "A";     font-size: 15px; }
+.arduino-icon       { @extend .file-icons; content: "\e930"; font-size: 16px; top: 3px; }
+.as-icon            { @extend .file-icons; content: "\e92e"; font-size: 14px; }
+.asciidoc-icon      { @extend .file-icons; content: "\e918"; font-size: 14px; }
+.ats-icon           { @extend .file-icons; content: "\e934"; font-size: 15px; }
+.audacity-icon      { @extend .file-icons; content: "\e9f9"; font-size: 15px; }
+.augeas-icon        { @extend .file-icons; content: "\e931"; font-size: 15px; }
+.autoit-icon        { @extend .file-icons; content: "\e933"; font-size: 16px; }
+.babel-icon         { @extend .file-icons; content: "\e91f"; font-size: 15px; top: 3px; left: 2px; }
+.bibtex-icon        { @extend .file-icons; content: "\e601"; font-size: 16px; @extend .thicken; }
+.blender-icon       { @extend .file-icons; content: "\e9fa"; font-size: 15px; }
+.bluespec-icon      { @extend .file-icons; content: "\e93c"; font-size: 12px; top: 1px; left: 1px; }
+.boo-icon           { @extend .file-icons; content: "\e939"; font-size: 15px; }
+.boot-icon          { @extend .file-icons; content: "\f103"; font-size: 16px; }
+.brain-icon         { @extend .file-icons; content: "\e93a"; font-size: 15px; }
+.brakeman-icon      { @extend .file-icons; content: "\e9d6"; font-size: 15px; }
+.bro-icon           { @extend .file-icons; content: "\e93b"; font-size: 16px; top: 3px; }
+.broccoli-icon      { @extend .file-icons; content: "\e922"; font-size: 14px; }
+.byond-icon         { @extend .file-icons; content: "\e962"; font-size: 15px; }
+.cabal-icon         { @extend .file-icons; content: "\e9c2"; font-size: 15px; }
+.cake-icon          { @extend .file-icons; content: "\e9e3"; font-size: 15px; }
+.cakefile-icon      { @extend .file-icons; content: "\e924"; font-size: 15px; }
+.cakephp-icon       { @extend .file-icons; content: "\e9d3"; font-size: 14px; }
+.cc-icon            { @extend .file-icons; content: "\e9d5"; font-size: 16px; }
+.ceylon-icon        { @extend .file-icons; content: "\e94f"; font-size: 15px; }
+.cf-icon            { @extend .file-icons; content: "\e929"; font-size: 15px; }
+.chapel-icon        { @extend .file-icons; content: "\e950"; font-size: 15px; }
+.chuck-icon         { @extend .file-icons; content: "\e943"; font-size: 15px; }
+.circleci-icon      { @extend .file-icons; content: "\ea12"; font-size: 14px; top: 2px; }
+.cirru-icon         { @extend .file-icons; content: "\e951"; font-size: 15px; @extend .sharpen; }
+.cl-icon            { @extend .file-icons; content: "\e972"; font-size: 15px; @extend .sharpen; }
+.clarion-icon       { @extend .file-icons; content: "\e952"; font-size: 14px; top: 1px; left: 1px; }
+.clean-icon         { @extend .file-icons; content: "\e95b"; font-size: 16px; }
+.click-icon         { @extend .file-icons; content: "\e95c"; font-size: 15px; }
+.clips-icon         { @extend .file-icons; content: "\e940"; font-size: 18px; left: 2px; }
+.cljs-icon          { @extend .file-icons; content: "\f104"; font-size: 15px; }
+.cmake-icon         { @extend .file-icons; content: "\e93f"; font-size: 14px; top: 1px; }
+.composer-icon      { @extend .file-icons; content: "\e683"; font-size: 17px; }
+.config-icon        { @extend .file-icons; content: "\f07c"; font-size: 14px; }
+.codecov-icon       { @extend .file-icons; content: "\2602"; font-size: 15px; top: 2px; }
+.coq-icon           { @extend .file-icons; content: "\e95f"; font-size: 16px; left: 1px; }
+.cp-icon            { @extend .file-icons; content: "\e942"; font-size: 17px; top: 3px; }
+.creole-icon        { @extend .file-icons; content: "\e95e"; font-size: 15px; }
+.crystal-icon       { @extend .file-icons; content: "\e902"; font-size: 15px; left: 1px; }
+.csound-icon        { @extend .file-icons; content: "\e9f0"; font-size: 15px; }
+.csscript-icon      { @extend .file-icons; content: "\e9e2"; font-size: 15px; }
+.cucumber-icon      { @extend .file-icons; content: "\f02b"; font-size: 15px; top: 3px; }
+.cython-icon        { @extend .file-icons; content: "\e963"; font-size: 15px; }
+.darcs-icon         { @extend .file-icons; content: "\e964"; font-size: 15px; }
+.dashboard-icon     { @extend .file-icons; content: "\f07d"; font-size: 13px; }
+.dbase-icon         { @extend .file-icons; content: "\e9f1"; font-size: 15px; }
+.default-icon       { @extend .file-icons; content: "\1f5cc";font-size: 14px; }
+.diff-icon          { @extend .file-icons; content: "\e960"; font-size: 15px; }
+.docker-icon        { @extend .file-icons; content: "\f106"; top: 3px; }
+.doxygen-icon       { @extend .file-icons; content: "\e928"; font-size: 13px; top: 1px;  }
+.doge-icon          { @extend .file-icons; content: "\e946"; font-size: 15px; }
+.dyalog-icon        { @extend .file-icons; content: "\e90c"; font-size: 14px; left: 1px; }
+.dylib-icon         { @extend .file-icons; content: "\ea15"; font-size: 15px; top: 2px; }
+.e-icon             { @extend .file-icons; content: "E";     font-size: 14px; }
+.eagle-icon         { @extend .file-icons; content: "\e965"; font-size: 15px; }
+.ec-icon            { @extend .file-icons; content: "\e9c9"; font-size: 15px; }
+.ecere-icon         { @extend .file-icons; content: "\e966"; font-size: 16px; top: 3px; }
+.editorconfig-icon  { @extend .file-icons; content: "\ea1b"; font-size: 15px; }
+.eiffel-icon        { @extend .file-icons; content: "\e967"; font-size: 16px; }
+.elm-icon           { @extend .file-icons; content: "\f102"; font-size: 15px; }
+.em-icon            { @extend .file-icons; content: "\e968"; font-size: 16px; top: 3px; }
+.emacs-icon         { @extend .file-icons; content: "\e926"; font-size: 15px; }
+.eq-icon            { @extend .file-icons; content: "\ea0a"; font-size: 15px; top: 5px; }
+.eslint-icon        { @extend .file-icons; content: "\ea0f"; font-size: 14px; left: 1px; }
+.excel-icon         { @extend .file-icons; content: "\e9ee"; font-size: 15px; }
+.fabfile-icon       { @extend .file-icons; content: "\e94b"; font-size: 16px; }
+.factor-icon        { @extend .file-icons; content: "\e96a"; font-size: 18px; left: -2px; top: 3px; transform: scale(1.2); }
+.fancy-icon         { @extend .file-icons; content: "\e96b"; font-size: 16px; }
+.fantom-icon        { @extend .file-icons; content: "\e96f"; font-size: 15px; left: 1px; }
+.fbx-icon           { @extend .file-icons; content: "\e9fc"; font-size: 15px; }
+.ff-icon            { @extend .file-icons; content: "\fb00"; font-size: 15px; top: 3px; }
+.flow-icon          { @extend .file-icons; content: "\e921"; font-size: 15px; left: 2px; top: 1px; }
+.flux-icon          { @extend .file-icons; content: "\e969"; font-size: 15px; }
+.font-icon          { @extend .file-icons; content: "\e90f"; font-size: 14px; left: 1px; top: -1px; }
+.fortran-icon       { @extend .file-icons; content: "\e90a"; font-size: 14px; left: 1px; top: 1px; }
+.freemarker-icon    { @extend .file-icons; content: "\e970"; font-size: 16px; left: 1px; }
+.frege-icon         { @extend .file-icons; content: "\e96e"; font-size: 16px; left: 1px; }
+.gams-icon          { @extend .file-icons; content: "\e973"; font-size: 15px; left: 1px; top: 3px; }
+.gap-icon           { @extend .file-icons; content: "\e971"; font-size: 16px; left: 1px; top: 3px; }
+.gdb-icon           { @extend .file-icons; content: "\ea08"; font-size: 16px; top: 3px; transform: scale(1.15); @extend .sharpen; }
+.godot-icon         { @extend .file-icons; content: "\e974"; font-size: 15px; }
+.genshi-icon        { @extend .file-icons; content: "\e976"; font-size: 15px; top: 3px; }
+.gentoo-icon        { @extend .file-icons; content: "\e96d"; font-size: 14px; left: 1px; }
+.gf-icon            { @extend .file-icons; content: "\e978"; font-size: 15px; }
+.glade-icon         { @extend .file-icons; content: "\e938"; font-size: 15px; }
+.glyphs-icon        { @extend .file-icons; content: "G";     font-size: 15px; top: 3px; }
+.gml-icon           { @extend .file-icons; content: "\e975"; font-size: 16px; top: 3px; }
+.gnu-icon           { @extend .file-icons; content: "\e679"; font-size: 16px; @extend .sharpen; }
+.go-icon            { @extend .file-icons; content: "\e624"; font-size: 15px; top: 3px; }
+.golo-icon          { @extend .file-icons; content: "\e979"; font-size: 15px; }
+.gosu-icon          { @extend .file-icons; content: "\e97a"; font-size: 15px; top: 3px; }
+.gradle-icon        { @extend .file-icons; content: "\e903"; font-size: 16px; top: 3px; left: 1px; }
+.graphql-icon       { @extend .file-icons; content: "\e97c"; font-size: 15px; }
+.graphviz-icon      { @extend .file-icons; content: "\e97d"; font-size: 17px; left:  1px; top: 4px; }
+.groovy-icon        { @extend .file-icons; content: "\e904"; font-size: 17px; left: -1px; top: 4px; }
+.hack-icon          { @extend .file-icons; content: "\e9ce"; font-size: 15px; }
+.haml-icon          { @extend .file-icons; content: "\f15b"; font-size: 15px; left: 1px; }
+.harbour-icon       { @extend .file-icons; content: "\e97b"; font-size: 16px; @extend .sharpen; }
+.hashicorp-icon     { @extend .file-icons; content: "\e97e"; font-size: 15px; }
+.haxe-icon          { @extend .file-icons; content: "\e907"; font-size: 15px; top: 1px; left: 1px; }
+.hy-icon            { @extend .file-icons; content: "\e97f"; font-size: 15px; }
+.idl-icon           { @extend .file-icons; content: "\e947"; font-size: 18px; top: 3px; }
+.idris-icon         { @extend .file-icons; content: "\e983"; font-size: 16px; @extend .thicken; }
+.igorpro-icon       { @extend .file-icons; content: "\e980"; font-size: 16px; @extend .thicken; }
+.indesign-icon      { @extend .file-icons; content: "\e9f4"; font-size: 15px; }
+.inform7-icon       { @extend .file-icons; content: "\e984"; font-size: 16px; @extend .sharpen; }
+.inno-icon          { @extend .file-icons; content: "\e985"; font-size: 15px; }
+.io-icon            { @extend .file-icons; content: "\e981"; font-size: 13px; @extend .thicken; top: 1px; }
+.ioke-icon          { @extend .file-icons; content: "\e982"; font-size: 15px; }
+.ionic-icon         { @extend .file-icons; content: "\f14b"; font-size: 15px; }
+.isabelle-icon      { @extend .file-icons; content: "\e945"; font-size: 16px; }
+.j-icon             { @extend .file-icons; content: "\e937"; font-size: 13px; }
+.jade-icon          { @extend .file-icons; content: "\e90d"; font-size: 12px; top: 1px; }
+.jake-icon          { @extend .file-icons; content: "\e948"; font-size: 16px; }
+.jenkins-icon       { @extend .file-icons; content: "\e667"; font-size: 18px; top: 3px; @extend .sharpen; }
+.jinja-icon         { @extend .file-icons; content: "\e944"; font-size: 15px; }
+.jsonld-icon        { @extend .file-icons; content: "\e958"; font-size: 17px; top: 3px; }
+.jsx-icon           { @extend .file-icons; content: "\f101"; font-size: 14px; }
+.jsx-icon           { @extend .file-icons; content: "\e9e6"; font-size: 14px; top: 1px; }
+.julia-icon         { @extend .file-icons; content: "\26ec"; font-size: 14px; }
+.jupyter-icon       { @extend .file-icons; content: "\e987"; font-size: 16px; top: 3px; }
+.karma-icon         { @extend .file-icons; content: "\e9cd"; font-size: 15px; }
+.keynote-icon       { @extend .file-icons; content: "\e9e5"; font-size: 15px; }
+.khronos-icon       { @extend .file-icons; content: "\e9f8"; font-size: 15px; }
+.kivy-icon          { @extend .file-icons; content: "\e901"; font-size: 15px; }
+.kotlin-icon        { @extend .file-icons; content: "\e989"; font-size: 14px; }
+.krl-icon           { @extend .file-icons; content: "\e988"; font-size: 14px; }
+.labview-icon       { @extend .file-icons; content: "\e98a"; font-size: 16px; }
+.lasso-icon         { @extend .file-icons; content: "\e98c"; font-size: 15px; left: 1px; top: 1px; }
+.lean-icon          { @extend .file-icons; content: "L";     font-size: 14px; left: 1px; top: 1px; }
+.lein-icon          { @extend .file-icons; content: "\f105"; font-size: 16px; }
+.lfe-icon           { @extend .file-icons; content: "\e94c"; font-size: 15px; }
+.lightwave-icon     { @extend .file-icons; content: "\e9fb"; font-size: 17px; top: 2px; }
+.lisp-icon          { @extend .file-icons; content: "\e908"; font-size: 17px; top: 3px; }
+.llvm-icon          { @extend .file-icons; content: "\e91d"; font-size: 17px; }
+.logtalk-icon       { @extend .file-icons; content: "\e98d"; font-size: 15px; @extend .sharpen; }
+.lookml-icon        { @extend .file-icons; content: "\e98e"; font-size: 16px; @extend .sharpen; }
+.ls-icon            { @extend .file-icons; content: "\e914"; font-size: 14px; }
+.lsl-icon           { @extend .file-icons; content: "\e98b"; font-size: 15px; top: 1px; }
+.lua-icon           { @extend .file-icons; content: "\e91b"; font-size: 14px; }
+.mako-icon          { @extend .file-icons; content: "\e98f"; font-size: 16px; top: 4px; }
+.mapbox-icon        { @extend .file-icons; content: "\e941"; font-size: 13px; }
+.marko-icon         { @extend .file-icons; content: "\e920"; font-size: 18px; top: 4px; left: -1px; transform: scale(1.05); }
+.mathematica-icon   { @extend .file-icons; content: "\e990"; font-size: 16px; }
+.matlab-icon        { @extend .file-icons; content: "\e991"; font-size: 15px; }
+.max-icon           { @extend .file-icons; content: "\e993"; font-size: 15px; }
+.maxscript-icon     { @extend .file-icons; content: "\e900"; font-size: 15px; }
+.maya-icon          { @extend .file-icons; content: "\e9f6"; font-size: 16px; }
+.manpage-icon       { @extend .file-icons; content: "\e936"; font-size: 15px; top: 3px; }
+.mediawiki-icon     { @extend .file-icons; content: "\e954"; font-size: 16px; }
+.mercury-icon       { @extend .file-icons; content: "\e994"; font-size: 16px; transform: scale(1.2); }
+.metal-icon         { @extend .file-icons; content: "M";     font-size: 15px; left: 1px; }
+.meteor-icon        { @extend .file-icons; content: "\e6a5"; font-size: 15px; left: 1px; top: 1px; }
+.minecraft-icon     { @extend .file-icons; content: "\e9dc"; font-size: 15px; }
+.mirah-icon         { @extend .file-icons; content: "\e995"; font-size: 15px; }
+.mocha-icon         { @extend .file-icons; content: "\26fe"; font-size: 15px; }
+.model-icon         { @extend .file-icons; content: "\e9e8"; font-size: 16px; }
+.modula2-icon       { @extend .file-icons; content: "\e996"; font-size: 15px; }
+.monkey-icon        { @extend .file-icons; content: "\e997"; font-size: 18px; top: 4px; left: -1px; }
+.mruby-icon         { @extend .file-icons; content: "\ea18"; font-size: 16px; }
+.mupad-icon         { @extend .file-icons; content: "\e9ca"; font-size: 16px; top: 3px; }
+.nant-icon          { @extend .file-icons; content: "\e9e1"; font-size: 15px; top: 3px; transform: scale(1.2); }
+.neko-icon          { @extend .file-icons; content: "\ea05"; font-size: 15px; }
+.netlogo-icon       { @extend .file-icons; content: "\e99c"; font-size: 15px; top: 3px; left: 1px; }
+.newrelic-icon      { @extend .file-icons; content: "\e9d7"; font-size: 15px; top: 3px; }
+.nginx-icon         { @extend .file-icons; content:"\f146b"; font-size: 15px; }
+.nib-icon           { @extend .file-icons; content: "\2712"; font-size: 15px; }
+.nimrod-icon        { @extend .file-icons; content: "\e998"; font-size: 15px; }
+.nit-icon           { @extend .file-icons; content: "\e999"; font-size: 15px; }
+.nix-icon           { @extend .file-icons; content: "\e99a"; font-size: 16px; top: 3px; }
+.nmap-icon          { @extend .file-icons; content: "\e94d"; font-size: 16px; top: 3px; transform: scale(1.1); }
+.npm-icon           { @extend .file-icons; content: "\e91c"; font-size: 17px; top: 3px; }
+.nsis-icon          { @extend .file-icons; content: "\ea1e"; font-size: 16px; top: 3px; }
+.numpy-icon         { @extend .file-icons; content: "\e99d"; font-size: 14px; }
+.nuget-icon         { @extend .file-icons; content: "\e9d9"; font-size: 15px; }
+.nunjucks-icon      { @extend .file-icons; content: "\e953"; font-size: 16px; }
+.nvidia-icon        { @extend .file-icons; content: "\e95d"; font-size: 15px; }
+.objj-icon          { @extend .file-icons; content: "\e99e"; font-size: 15px; }
+.ocaml-icon         { @extend .file-icons; content: "\e91a"; font-size: 14px; }
+.onenote-icon       { @extend .file-icons; content: "\e9eb"; font-size: 15px; }
+.ooc-icon           { @extend .file-icons; content: "\e9cb"; font-size: 15px; }
+.opa-icon           { @extend .file-icons; content: "\2601"; font-size: 15px; }
+.opencl-icon        { @extend .file-icons; content: "\e99f"; font-size: 16px; }
+.openoffice-icon    { @extend .file-icons; content: "\e9e4"; font-size: 15px; }
+.org-icon           { @extend .file-icons; content: "\e917"; font-size: 14px; left: 1px; }
+.owl-icon           { @extend .file-icons; content: "\e957"; font-size: 15px; }
+.ox-icon            { @extend .file-icons; content: "\e9a1"; font-size: 16px; top: 3px; @extend .sharpen; }
+.oxygene-icon       { @extend .file-icons; content: "\e9bf"; font-size: 15px; }
+.oz-icon            { @extend .file-icons; content: "\e9be"; font-size: 15px; }
+.pan-icon           { @extend .file-icons; content: "\e9bd"; font-size: 15px; }
+.papyrus-icon       { @extend .file-icons; content: "\e9bc"; font-size: 15px; top: 3px; }
+.parrot-icon        { @extend .file-icons; content: "\e9bb"; font-size: 16px; top: 3px; }
+.pascal-icon        { @extend .file-icons; content: "\e92a"; font-size: 15px; }
+.patch-icon         { @extend .file-icons; content: "\e961"; font-size: 15px; }
+.pawn-icon          { @extend .file-icons; content: "\265f"; font-size: 14px; }
+.perl6-icon         { @extend .file-icons; content: "\e96c"; font-size: 15px; }
+.phalcon-icon       { @extend .file-icons; content: "\e94a"; font-size: 15px; }
+.php-icon           { @extend .file-icons; content: "\f147"; font-size: 14px; left: 1px; }
+.pickle-icon        { @extend .file-icons; content: "\e9c4"; font-size: 15px; }
+.pike-icon          { @extend .file-icons; content: "\e9b9"; font-size: 16px; top: 4px; @extend .thicken; transform: scale(1.15); }
+.pogo-icon          { @extend .file-icons; content: "\e9b8"; font-size: 14px; top: 3px; @extend .thicken; }
+.pony-icon          { @extend .file-icons; content: "\e9b7"; font-size: 16px; top: 3px; }
+.pointwise-icon     { @extend .file-icons; content: "\e977"; font-size: 15px; }
+.postcss-icon       { @extend .file-icons; content: "\e910"; font-size: 14px; }
+.postscript-icon    { @extend .file-icons; content: "\e955"; font-size: 15px; left: 1px; }
+.povray-icon        { @extend .file-icons; content: "P";     font-size: 15px; left: 1px; }
+.powerbuilder-icon  { @extend .file-icons; content: "\ea14"; font-size: 15px; }
+.powerpoint-icon    { @extend .file-icons; content: "\e9ec"; font-size: 15px; }
+.powershell-icon    { @extend .file-icons; content: "\e9da"; font-size: 16px; }
+.premiere-icon      { @extend .file-icons; content: "\e9f5"; font-size: 15px; }
+.processing-icon    { @extend .file-icons; content: "\e9a0"; font-size: 15px; }
+.progress-icon      { @extend .file-icons; content: "\e9c0"; font-size: 16px; transform: scale(1.2); }
+.propeller-icon     { @extend .file-icons; content: "\e9b5"; font-size: 16px; }
+.protractor-icon    { @extend .file-icons; content: "\e9de"; font-size: 15px; top: 3px; }
+.psd-icon           { @extend .file-icons; content: "\e6b8"; font-size: 15px; }
+.pug-icon           { @extend .file-icons; content: "\ea13"; font-size: 16px; top: 3px; }
+.pug-alt-icon       { @extend .file-icons; content: "\e9d0"; font-size: 16px; top: 3px; }
+.puppet-icon        { @extend .file-icons; content: "\f0c3"; font-size: 15px; left: 1px; }
+.purebasic-icon     { @extend .file-icons; content: "\01b5"; font-size: 15px; top: 3px; }
+.purescript-icon    { @extend .file-icons; content: "\e9b2"; font-size: 15px; top: 3px; }
+.r-icon             { @extend .file-icons; content: "\e905"; font-size: 17px; top: 3px; }
+.racket-icon        { @extend .file-icons; content: "\e9b1"; font-size: 15px; left: 1px; }
+.raml-icon          { @extend .file-icons; content: "\e913"; font-size: 14px; }
+.rdoc-icon          { @extend .file-icons; content: "\e9b0"; font-size: 15px; }
+.react-icon         { @extend .file-icons; content: "\f100"; font-size: 15px; top: 3px; }
+.reason-icon        { @extend .file-icons; content: "\ea1d"; font-size: 15px; top: 3px; }
+.rebol-icon         { @extend .file-icons; content: "\e9ae"; font-size: 13px; top: 1px; }
+.red-icon           { @extend .file-icons; content: "\e9ad"; font-size: 16px; top: 3px; }
+.regex-icon         { @extend .file-icons; content: "*";     font-size: 12px; left: 1px; top: 1px; }
+.rexx-icon          { @extend .file-icons; content: "\ea16"; font-size: 14px; left: 1px; }
+.riot-icon          { @extend .file-icons; content: "\e919"; font-size: 18px; left: 0; top: 4px; }
+.robot-icon         { @extend .file-icons; content: "\e9ac"; font-size: 14px; }
+.rollup-icon        { @extend .file-icons; content: "\ea20"; font-size: 15px; left: 0; top: 2px; }
+.rst-icon           { @extend .file-icons; content: "\e9cc"; font-size: 16px; top: 3px; }
+.sage-icon          { @extend .file-icons; content: "\e9ab"; font-size: 16px; top: 3px; @extend .thicken; }
+.saltstack-icon     { @extend .file-icons; content: "\e915"; font-size: 14px; }
+.sas-icon           { @extend .file-icons; content: "\e95a"; font-size: 15px; }
+.sbt-icon           { @extend .file-icons; content: "\e9d2"; font-size: 14px; }
+.scd-icon           { @extend .file-icons; content: "\e9a2"; font-size: 15px; }
+.scad-icon          { @extend .file-icons; content: "\e911"; font-size: 14px; }
+.scheme-icon        { @extend .file-icons; content: "\03bb"; font-size: 15px; }
+.scilab-icon        { @extend .file-icons; content: "\e9a9"; font-size: 18px; left: -1px; top: 3px; @extend .thicken; }
+.scrutinizer-icon   { @extend .file-icons; content: "\e9d4"; font-size: 14px; }
+.self-icon          { @extend .file-icons; content: "\e9a8"; font-size: 16px; }
+.sf-icon            { @extend .file-icons; content: "\e9db"; font-size: 15px; }
+.shen-icon          { @extend .file-icons; content: "\e9a7"; font-size: 16px; }
+.shopify-icon       { @extend .file-icons; content: "\e9cf"; font-size: 15px; }
+.sigils-icon        { @extend .file-icons; content: "\1f764";font-size: 16px; top: 3px; @extend .sharpen; }
+.silverstripe-icon  { @extend .file-icons; content: "\e800"; font-size: 15px; }
+.sketch-icon        { @extend .file-icons; content: "\e927"; font-size: 15px; }
+.slash-icon         { @extend .file-icons; content: "\e9a6"; font-size: 15px; }
+.snyk-icon          { @extend .file-icons; content: "\ea1c"; font-size: 16px; }
+.sparql-icon        { @extend .file-icons; content: "\e959"; font-size: 15px; }
+.sqf-icon           { @extend .file-icons; content: "\e9a5"; font-size: 15px; @extend .sharpen; }
+.sqlite-icon        { @extend .file-icons; content: "\e9dd"; font-size: 15px; top: 3px; }
+.stan-icon          { @extend .file-icons; content: "\e9a4"; font-size: 15px; }
+.stata-icon         { @extend .file-icons; content: "\e9a3"; font-size: 15px; }
+.storyist-icon      { @extend .file-icons; content: "\e9ef"; font-size: 16px; }
+.strings-icon       { @extend .file-icons; content: "\e9e0"; font-size: 15px; }
+.stylelint-icon     { @extend .file-icons; content: "\e93d"; font-size: 15px; }
+.stylus-icon        { @extend .file-icons; content: "s";     font-size: 15px; top: 2px; left: 1px; }
+.sublime-icon       { @extend .file-icons; content: "\e986"; font-size: 15px; }
+.svn-icon           { @extend .file-icons; content: "\ea17"; font-size: 15px; top: 2px; }
+.sysverilog-icon    { @extend .file-icons; content: "\e9c3"; font-size: 15px; }
+.tag-icon           { @extend .file-icons; content: "\f015"; font-size: 14px; }
+.tcl-icon           { @extend .file-icons; content: "\e956"; font-size: 16px; top: 3px; left: 1px; }
+.terminal-icon      { @extend .file-icons; content: "\f0c8"; font-size: 14px; }
+.tern-icon          { @extend .file-icons; content: "\1f54a";font-size: 16px; top: 4px; }
+.terraform-icon     { @extend .file-icons; content: "\e916"; font-size: 14px; }
+.tex-icon           { @extend .file-icons; content: "\e600"; font-size: 16px; top: 4px; @extend .thicken; }
+.textile-icon       { @extend .file-icons; content: "t";     font-size: 15px; }
+.textmate-icon      { @extend .file-icons; content: "\2122"; font-size: 16px; }
+.thor-icon          { @extend .file-icons; content: "\e9d8"; font-size: 15px; }
+.ts-icon            { @extend .file-icons; content: "\2a6" ; font-size: 14px; top: 1px; }
+.tsx-icon           { @extend .file-icons; content: "\e9e7"; font-size: 14px; top: 1px; }
+.turing-icon        { @extend .file-icons; content: "\e9b6"; font-size: 15px; }
+.txl-icon           { @extend .file-icons; content: "\e9c1"; font-size: 15px; }
+.typedoc-icon       { @extend .file-icons; content: "\e9fe"; font-size: 15px; }
+.typings-icon       { @extend .file-icons; content: "\e9df"; font-size: 15px; }
+.uno-icon           { @extend .file-icons; content: "\e9b3"; font-size: 15px; }
+.unreal-icon        { @extend .file-icons; content: "u";     font-size: 15px; }
+.urweb-icon         { @extend .file-icons; content: "\e9ba"; font-size: 18px; top: 4px; left: -1px; @extend .sharpen; }
+.webpack-icon       { @extend .file-icons; content: "\e91e"; font-size: 15px; top: 3px; }
+.wercker-icon       { @extend .file-icons; content: "\EA19"; font-size: 15px; top: 2px; }
+.word-icon          { @extend .file-icons; content: "\e9ed"; font-size: 15px; }
+.vagrant-icon       { @extend .file-icons; content: "V";     font-size: 14px; }
+.varnish-icon       { @extend .file-icons; content: "\e9b4"; font-size: 14px; }
+.verilog-icon       { @extend .file-icons; content: "\e949"; font-size: 15px; top: 3px; }
+.vhdl-icon          { @extend .file-icons; content: "\e9aa"; font-size: 15px; }
+.video-icon         { @extend .file-icons; content: "\f057"; font-size: 14px; top: 1px; }
+.vue-icon           { @extend .file-icons; content: "\e906"; font-size: 15px; top: 3px; }
+.x10-icon           { @extend .file-icons; content: "\2169"; font-size: 15px; }
+.xmos-icon          { @extend .file-icons; content: "X";     font-size: 14px; top: 3px; }
+.xojo-icon          { @extend .file-icons; content: "\e9af"; font-size: 15px; }
+.xpages-icon        { @extend .file-icons; content: "\e9c5"; font-size: 15px; top: 3px; }
+.xtend-icon         { @extend .file-icons; content: "\e9c6"; font-size: 15px; }
+.yang-icon          { @extend .file-icons; content: "\262f"; font-size: 15px; }
+.yarn-icon          { @extend .file-icons; content: "\ea1a"; font-size: 16px; }
+.zbrush-icon        { @extend .file-icons; content: "\e9f2"; font-size: 16px; }
+.zephir-icon        { @extend .file-icons; content: "\e9c7"; font-size: 15px; @extend .thicken; }
+.zimpl-icon         { @extend .file-icons; content: "\e9c8"; font-size: 16px; left: 1px; }
+

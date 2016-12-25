@@ -12,10 +12,10 @@ class Project
     constructor (directory) {
         this.directory = directory;
         this.name      = path.basename(directory);
-        this.files     = this.files();
+        this.nodes     = this.nodes();
     }
 
-    files () {
+    nodes () {
         return fs
             .readdirSync(this.directory)
             .filter(node => ! node.startsWith('.'))
@@ -30,16 +30,20 @@ class Project
             name: node,
             path: fullpath,
             is_directory: this._isDirectory(node),
-            extension: path.extname(node),
+            extension: this._extension(node),
         };
     }
 
-    _fullPath (file) {
-        return this.directory + '/' + file;
+    _extension (node) {
+        return path.extname(node).substring(1);
     }
 
-    _isDirectory (file) {
-        return fs.lstatSync(file).isDirectory();
+    _fullPath (node) {
+        return this.directory + '/' + node;
+    }
+
+    _isDirectory (node) {
+        return fs.lstatSync(node).isDirectory();
     }
 }
 

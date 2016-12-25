@@ -6,7 +6,7 @@ import Vue from 'vue';
 Vue.use(require('vuex'));
 Vue.use(require('vue-router'));
 
-Vue.component('sidebar', require('./components/Sidebar.vue'));
+Vue.component('tree-view', require('./components/TreeView.vue'));
 
 const app = new Vue({
     router: require('./routes.js'),

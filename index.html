@@ -4,17 +4,19 @@
         <meta charset="UTF-8">
         <title>Atom</title>
 
+        <link href="build/atom.css" rel="stylesheet">
+
         <script>
-            let electron = require('electron');
+            let { remote }= require('electron');
             let Atom = {
-                project: electron.remote.getCurrentWindow().project
+                project: remote.getCurrentWindow().project
             };
         </script>
     </head>
 
     <body>
         <main class="app">
-            <sidebar :project="project"></sidebar>
+            <tree-view :project="project"></tree-view>
         </main>
     </body>
 
