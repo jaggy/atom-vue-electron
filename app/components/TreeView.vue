@@ -7,12 +7,9 @@
 
             <ul class="project__nodes node-list">
                 <li class="node-item"
-                    v-for="node in project.nodes"
-                    :class="[ 
-                        modifier(node),
-                        { 'node-item--directory': node.is_directory }
-                    ]">
-                    <a class="node-item__link" href="#">
+                    v-for="node in project.nodes">
+                    <a class="node-item__link" href="#"
+                       :class="[ icon(node) ]">
                         {{ node.name }}
                     </a>
                 </li>
@@ -28,14 +25,8 @@
         },
 
         methods: {
-            modifier (node) {
-                let prefix = 'node-item'
-
-                if (node.is_directory) {
-                    return null;
-                }
-
-                return `${prefix}--${node.extension}`;
+            icon (node) {
+                return `icon-${node.extension}`;
             }
         }
     }

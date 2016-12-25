@@ -12,7 +12,3 @@
 .node-item__link:hover {
     background-color: #005f60;
 }
-
-.node-item--md > .node-item__link:before {
-    @extend .markdown-icon;
-}

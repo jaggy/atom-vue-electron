@@ -1,49 +1,12 @@
 @font-face {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  src: url("/resources/fonts/fontawesome.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: FontMfizz;
-  src: url("/resources/fonts/mfizz.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: icomoon;
-  src: url("/resources/fonts/icomoon.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: devicons;
-  src: url("/resources/fonts/devicons.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "file-icons";
-  src: url("/resources/fonts/file-icons-v1.7.25.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "iconsxd";
-  src: url("/resources/fonts/file-icons-v1.7.25.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "tex";
-  src: url("/resources/fonts/file-icons-v1.7.25.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'seti';
+    src: url('../resources/fonts/seti.eot');
+    src: url('../resources/fonts/seti.eot?#iefix') format('eot'),
+        url('../resources/fonts/seti.woff2') format('woff2'),
+        url('../resources/fonts/seti.woff') format('woff'),
+        url('../resources/fonts/seti.ttf') format('truetype'),
+        url('../resources/fonts/eti.svg#seti') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
