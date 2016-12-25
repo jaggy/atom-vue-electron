@@ -1,40 +1,37 @@
 let fs = require('fs');
+let path = require('path');
+
+Array.prototype.sortByDirectory = function () {
+    return this
+        .filter(node => node.is_directory)
+        .concat(this.filter(node => ! node.is_directory))
+};
 
 class Project
 {
     constructor (directory) {
         this.directory = directory;
-        this.name      = this.name();
+        this.name      = path.basename(directory);
         this.files     = this.files();
     }
 
-    name () {
-        let segments = this.directory.split('/');
-
-        return segments[segments.length - 1];
+    files () {
+        return fs
+            .readdirSync(this.directory)
+            .filter(node => ! node.startsWith('.'))
+            .map(node => this._newNode(node))
+            .sortByDirectory();
     }
 
-    files () {
-        let filenames = fs.readdirSync(this.directory);
-        let groups = [];
+    _newNode (node) {
+        let fullpath = this._fullPath(node);
 
-        let files = filenames
-            .filter(filename => ! filename.startsWith('.'))
-            .map(filename => {
-                let file = this._fullPath(filename);
-
-                return {
-                    name: filename,
-                    path: file,
-                    is_directory: this._isDirectory(file),
-                };
-            })
-
-        return files
-            .filter(file => file.is_directory)
-            .concat(
-                files.filter(file => ! file.is_directory)
-            )
+        return {
+            name: node,
+            path: fullpath,
+            is_directory: this._isDirectory(node),
+            extension: path.extname(node),
+        };
     }
 
     _fullPath (file) {
