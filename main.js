@@ -21,6 +21,8 @@ function createWindow () {
 
     mainWindow.project = new Project('/Users/jaggy/code/atom');
 
+    console.error(mainWindow.project);
+
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),

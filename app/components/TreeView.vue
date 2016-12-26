@@ -9,7 +9,10 @@
                 <li class="node-item"
                     v-for="node in project.nodes">
                     <a class="node-item__link" href="#"
-                       :class="[ icon(node) ]">
+                       :class="[ 
+                           icon(node),
+                           { 'icon-folder': node.is_directory }
+                       ]">
                         {{ node.name }}
                     </a>
                 </li>
@@ -26,7 +29,11 @@
 
         methods: {
             icon (node) {
-                return `icon-${node.extension}`;
+                if (! node.filetype) {
+                    return null;
+                }
+
+                return `icon-${node.filetype}`;
             }
         }
     }

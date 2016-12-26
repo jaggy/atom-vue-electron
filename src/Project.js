@@ -1,5 +1,6 @@
-let fs = require('fs');
+let Filetype = require('./Filetype.js');
 let path = require('path');
+let fs = require('fs');
 
 Array.prototype.sortByDirectory = function () {
     return this
@@ -30,12 +31,8 @@ class Project
             name: node,
             path: fullpath,
             is_directory: this._isDirectory(node),
-            extension: this._extension(node),
+            filetype: Filetype.guess(node),
         };
-    }
-
-    _extension (node) {
-        return path.extname(node).substring(1);
     }
 
     _fullPath (node) {
