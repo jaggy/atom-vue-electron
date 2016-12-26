@@ -2,11 +2,15 @@
     font-family: 'seti';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: color(blue);
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
     text-decoration: none;
     text-transform: none;
+
+    position: relative;
+    top: 1px;
 }
 
 $icons: (
@@ -407,4 +411,17 @@ $icons: (
 }
 .icon-yml:before {
     @include icon(yml);
+}
+
+
+.icon-bower:before,
+.icon-grunt:before,
+.icon-hacklang:before,
+.icon-mustache:before,
+.icon-ocaml:before,
+.icon-slim:before,
+.icon-swift:before,
+.icon-xml:before,
+.icon-html:before {
+    color: color(orange);
 }

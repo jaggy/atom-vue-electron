@@ -1,14 +1,34 @@
+$tree-view-item-side-padding: 0.75rem;
+
+.tree-view {
+    max-width: 13.75rem;
+}
+
 .tree-view__header {
     font-size: 1rem;
-    padding-top: 2rem;
+    padding: 1rem $tree-view-item-side-padding;
+}
+
+.node-item {
+    display: inline;
+}
+
+.node-item__link:before {
+    margin-right: 0.5rem;
 }
 
 .node-item__link {
-    display: block;
-    line-height: 1.5;
-    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+
+    font-size: .875rem;
+    padding: 0.5rem $tree-view-item-side-padding;
 }
 
 .node-item__link:hover {
     background-color: #005f60;
+}
+
+.node-item__name {
+    display: block;
 }

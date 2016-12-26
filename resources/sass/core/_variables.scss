@@ -1,5 +1,18 @@
-$background: #091a21;
-
 $colors: (
-    white: #eeeeee
+    black: #16191b,
+    white: #eeeeee,
+    grey: #717f85,
+    blue: #619ab7,
+    red: #bc4e4e,
+    green: #9bba4c,
+    orange: #d57e43,
+    yellow: #cdc54b,
+    purple: #967dc3,
+    pink: #de6688,
 );
+
+@function color($color) {
+    @return map-get($colors, $color);
+}
+
+$background: color(black);

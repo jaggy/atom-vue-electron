@@ -2,7 +2,7 @@
     <aside class="tree-view">
         <nav class="project">
             <h2 class="tree-view__header project__name">
-                {{ project.name }}
+                <a href="#">{{ project.name }}</a>
             </h2>
 
             <ul class="project__nodes node-list">
@@ -13,7 +13,7 @@
                            icon(node),
                            { 'icon-folder': node.is_directory }
                        ]">
-                        {{ node.name }}
+                        <label class="node-item__name">{{ node.name }}</label>
                     </a>
                 </li>
             </ul>
