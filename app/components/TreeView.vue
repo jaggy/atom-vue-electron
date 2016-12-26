@@ -12,7 +12,8 @@
                        :class="[ 
                            icon(node),
                            { 'icon-folder': node.is_directory }
-                       ]">
+                       ]"
+                       @click="select(node)">
                         <label class="node-item__name">{{ node.name }}</label>
                     </a>
                 </li>
@@ -34,6 +35,14 @@
                 }
 
                 return `icon-${node.filetype}`;
+            },
+
+            select (node) {
+                if (node.is_directory) {
+                    return console.error(`expand directory ${node.path}`);
+                }
+
+                console.error(`opening file ${node.path}`);
             }
         }
     }

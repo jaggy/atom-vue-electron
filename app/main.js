@@ -4,7 +4,6 @@
 import Vue from 'vue';
 
 Vue.use(require('vuex'));
-Vue.use(require('vue-router'));
 
 Vue.component('tree-view', require('./components/TreeView.vue'));
 
