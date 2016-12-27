@@ -1,47 +1,48 @@
-let Filetype = require('./Filetype.js');
-let path = require('path');
-let fs = require('fs');
-
-Array.prototype.sortByDirectory = function () {
-    return this
-        .filter(node => node.is_directory)
-        .concat(this.filter(node => ! node.is_directory))
-};
+let Filetype = require('./Filetype.js')
+let path = require('path')
+let fs = require('fs')
 
 class Project
 {
-    constructor (directory) {
-        this.directory = directory;
-        this.name      = path.basename(directory);
-        this.nodes     = this.nodes();
-    }
+  constructor (directory) {
+    this.directory = directory
+    this.name = path.basename(directory)
+    this.nodes = this.nodes()
+  }
 
-    nodes () {
-        return fs
-            .readdirSync(this.directory)
-            .filter(node => ! node.startsWith('.'))
-            .map(node => this._newNode(node))
-            .sortByDirectory();
-    }
+  nodes () {
+    let nodes = fs
+      .readdirSync(this.directory)
+      .filter(node => !node.startsWith('.'))
+      .map(node => this._newNode(node))
 
-    _newNode (node) {
-        let fullpath = this._fullPath(node);
+    return this._sortByDirectory(nodes)
+  }
 
-        return {
-            name: node,
-            path: fullpath,
-            is_directory: this._isDirectory(node),
-            filetype: Filetype.guess(node),
-        };
-    }
+  _newNode (node) {
+    let fullpath = this._fullPath(node)
 
-    _fullPath (node) {
-        return this.directory + '/' + node;
+    return {
+      name: node,
+      path: fullpath,
+      is_directory: this._isDirectory(node),
+      filetype: Filetype.guess(node)
     }
+  }
 
-    _isDirectory (node) {
-        return fs.lstatSync(node).isDirectory();
-    }
+  _sortByDirectory (array) {
+    return array
+      .filter(node => node.is_directory)
+      .concat(array.filter(node => !node.is_directory))
+  }
+
+  _fullPath (node) {
+    return this.directory + '/' + node
+  }
+
+  _isDirectory (node) {
+    return fs.lstatSync(node).isDirectory()
+  }
 }
 
-module.exports = Project;
+module.exports = Project

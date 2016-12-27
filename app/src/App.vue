@@ -9,6 +9,7 @@
 <script>
 import Vue from 'vue'
 import store from 'src/vuex/store'
+import Project from 'src/Project'
 
 Vue.component('tree-view', require('src/components/TreeView.vue'))
 
@@ -17,9 +18,7 @@ export default {
 
   data () {
     return {
-      project: {
-        name: 'test'
-      }
+      project: new Project('/Users/jaggy/code/atom')
     }
   }
 }
