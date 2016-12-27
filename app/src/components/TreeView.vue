@@ -48,7 +48,7 @@ export default {
         return console.error(`expand directory ${node.path}`)
       }
 
-      this.$store.dispatch('readFile', node)
+      this.$store.dispatch('openFile', node)
     }
   }
 }

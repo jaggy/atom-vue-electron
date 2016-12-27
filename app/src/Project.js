@@ -25,7 +25,7 @@ class Project
     return {
       name: node,
       path: fullpath,
-      is_directory: this._isDirectory(node),
+      is_directory: this._isDirectory(fullpath),
       filetype: Filetype.guess(node)
     }
   }

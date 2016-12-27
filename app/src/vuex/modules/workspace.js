@@ -1,4 +1,5 @@
 import * as types from '../mutation-types'
+import Project from 'src/Project'
 
 const state = {
   project: null,
@@ -7,8 +8,8 @@ const state = {
 }
 
 const mutations = {
-  [types.OPEN_PROJECT] (state, project) {
-    state.project = project
+  [types.OPEN_PROJECT] (state, path) {
+    state.project = new Project(path)
   },
 
   [types.OPEN_FILE] (state, file) {
@@ -17,6 +18,11 @@ const mutations = {
     }
 
     state.active = file
+  },
+
+  [types.CLEAR_ALL_FILES] (state) {
+    state.files = []
+    state.active = null
   }
 }
 

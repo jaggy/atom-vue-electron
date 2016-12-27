@@ -26,7 +26,7 @@ export default {
 
   methods: {
     select (file) {
-      this.$store.dispatch('readFile', file)
+      this.$store.dispatch('openFile', file)
     }
   }
 }
