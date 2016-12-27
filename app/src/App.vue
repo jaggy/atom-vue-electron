@@ -1,7 +1,9 @@
 <template>
-  <div class="app">
+  <main class="app">
     <tree-view :project="project"></tree-view>
-  </div>
+
+    <workspace></workspace>
+  </main>
 </template>
 
 <script>
@@ -10,6 +12,7 @@ import store from 'src/vuex/store'
 import Project from 'src/Project'
 
 Vue.component('tree-view', require('src/components/TreeView.vue'))
+Vue.component('workspace', require('src/components/Workspace.vue'))
 
 export default {
   store,

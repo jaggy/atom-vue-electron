@@ -8,11 +8,13 @@
 }
 
 html, body {
-    -webkit-font-smoothing: subpixel-antialiased;
-
     background-color: $background;
     color: color(white);
     font-size: 16px;
     line-height: 1.1;
+}
+
+html, body, #app, .app {
+    height: 100%;
 }
 

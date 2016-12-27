@@ -28,10 +28,6 @@
       project: Object
     },
 
-    mounted () {
-      console.error(this.project)
-    },
-
     methods: {
       icon (node) {
         if (!node.filetype) {
@@ -46,7 +42,7 @@
           return console.error(`expand directory ${node.path}`)
         }
 
-        console.error(`opening file ${node.path}`)
+        this.$store.dispatch('readFile', node)
       }
     }
   }
