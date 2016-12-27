@@ -1,8 +1,6 @@
 <template>
-  <div>
+  <div class="app">
     <tree-view :project="project"></tree-view>
-
-    testing
   </div>
 </template>
 
@@ -23,3 +21,5 @@ export default {
   }
 }
 </script>
+
+<style src="./sass/atom.scss"></style>
