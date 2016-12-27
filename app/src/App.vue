@@ -22,4 +22,4 @@ export default {
 }
 </script>
 
-<style src="./sass/atom.scss"></style>
+<style lang="scss" src="./sass/app.scss"></style>
