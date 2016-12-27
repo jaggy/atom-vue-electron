@@ -1,0 +1,20 @@
+.tab-view {
+}
+
+.tab-list {
+    display: flex;
+    list-style: none;
+}
+
+.tab-item {
+}
+
+.tab-item__link {
+    display: block;
+    padding: 1rem;
+}
+
+.tab-item__link--active,
+.tab-item__link:hover {
+    background-color: #005f60;
+}

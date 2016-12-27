@@ -21,6 +21,11 @@ $tree-view-item-side-padding: 0.75rem;
     padding: 0.5rem $tree-view-item-side-padding;
 }
 
+.node-item__link--active {
+    pointer-events: none;
+}
+
+.node-item__link--active,
 .node-item__link:hover {
     background-color: #005f60;
 }

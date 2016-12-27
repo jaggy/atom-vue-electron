@@ -11,7 +11,10 @@
           <a class="node-item__link" href="#"
              :class="[ 
                icon(node),
-               { 'icon-folder': node.is_directory }
+               { 
+                  'icon-folder': node.is_directory,
+                  'node-item__link--active': node === active_file
+               }
              ]"
              @click="select(node)">
             <label class="node-item__name">{{ node.name }}</label>
@@ -23,27 +26,30 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      project: Object
+import { mapState } from 'vuex'
+
+export default {
+  computed: mapState({
+    project: state => state.workspace.project,
+    active_file: state => state.workspace.active
+  }),
+
+  methods: {
+    icon (node) {
+      if (!node.filetype) {
+        return null
+      }
+
+      return `icon-${node.filetype}`
     },
 
-    methods: {
-      icon (node) {
-        if (!node.filetype) {
-          return null
-        }
-
-        return `icon-${node.filetype}`
-      },
-
-      select (node) {
-        if (node.is_directory) {
-          return console.error(`expand directory ${node.path}`)
-        }
-
-        this.$store.dispatch('readFile', node)
+    select (node) {
+      if (node.is_directory) {
+        return console.error(`expand directory ${node.path}`)
       }
+
+      this.$store.dispatch('readFile', node)
     }
   }
+}
 </script>

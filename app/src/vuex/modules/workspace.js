@@ -1,12 +1,22 @@
 import * as types from '../mutation-types'
 
 const state = {
-  file: null
+  project: null,
+  files: [],
+  active: null
 }
 
 const mutations = {
-  [types.READ_FILE] (state, file) {
-    state.file = file
+  [types.OPEN_PROJECT] (state, project) {
+    state.project = project
+  },
+
+  [types.OPEN_FILE] (state, file) {
+    if (!state.files.includes(file)) {
+      state.files.unshift(file)
+    }
+
+    state.active = file
   }
 }
 

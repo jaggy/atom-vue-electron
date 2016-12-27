@@ -9,7 +9,7 @@ export const readFile = ({ commit }, file) => {
 
     file.data = data
 
-    commit(types.READ_FILE, file)
+    commit(types.OPEN_FILE, file)
   })
 }
 

@@ -1,15 +1,16 @@
 <template>
-<div class="workspace">
-  <pre v-if="file"><code>{{ file.data }}</code></pre>
-</div>
+  <div class="workspace">
+      <tab-view></tab-view>
+
+      <editor></editor>
+  </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
-  computed: mapState({
-    file: state => state.workspace.file
-  })
+  components: {
+    'tab-view': require('src/components/TabView.vue'),
+    'editor': require('src/components/Editor.vue')
+  }
 }
 </script>
