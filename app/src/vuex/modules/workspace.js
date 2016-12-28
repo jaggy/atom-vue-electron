@@ -1,5 +1,5 @@
 import * as types from '../mutation-types'
-import Folder from 'src/Folder'
+import Project from 'src/Project'
 
 const state = {
   project: null,
@@ -9,7 +9,7 @@ const state = {
 
 const mutations = {
   [types.OPEN_PROJECT] (state, path) {
-    state.project = new Folder(path)
+    state.project = new Project(path)
   },
 
   [types.OPEN_FILE] (state, file) {

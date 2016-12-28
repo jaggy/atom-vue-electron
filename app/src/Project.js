@@ -2,7 +2,7 @@ let Filetype = require('./Filetype.js')
 let path = require('path')
 let fs = require('fs')
 
-class Folder
+class Project
 {
   constructor (directory) {
     this.directory = directory
@@ -45,4 +45,4 @@ class Folder
   }
 }
 
-module.exports = Folder
+module.exports = Project
