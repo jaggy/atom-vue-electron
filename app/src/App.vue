@@ -8,7 +8,8 @@
 
 <script>
 import store from 'src/vuex/store'
-const {dialog, globalShortcut} = require('electron').remote
+const {remote} = require('electron')
+const {dialog, globalShortcut} = remote
 
 export default {
   store,

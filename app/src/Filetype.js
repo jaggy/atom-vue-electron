@@ -10,6 +10,8 @@ class Filetype
       'md': 'markdown',
       'artisan': 'laravel',
       'TODO': 'todo',
+      'artisan': 'php',
+      'composer.lock': 'php',
       'yarn.lock': 'javascript',
       'js': 'javascript'
     }
