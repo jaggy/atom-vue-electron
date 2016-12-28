@@ -8,6 +8,8 @@ Vue.use(Electron)
 Vue.use(Resource)
 Vue.config.debug = true
 
+require('electron').remote.globalShortcut.unregisterAll()
+
 /* eslint-disable no-new */
 new Vue({
   ...App

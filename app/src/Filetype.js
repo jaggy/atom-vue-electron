@@ -8,7 +8,6 @@ class Filetype
       'gulpfile.js': 'gulp',
       '.gitignore': 'git',
       'md': 'markdown',
-      'artisan': 'laravel',
       'TODO': 'todo',
       'artisan': 'php',
       'composer.lock': 'php',
