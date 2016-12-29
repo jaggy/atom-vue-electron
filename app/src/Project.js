@@ -22,12 +22,24 @@ class Project
   _newNode (node) {
     let fullpath = this._fullPath(node)
 
-    return {
+    node = {
       name: node,
       path: fullpath,
       is_directory: this._isDirectory(fullpath),
       filetype: Filetype.guess(node)
     }
+
+    node.nodes = this._getChildren(node)
+
+    return node
+  }
+
+  _getChildren (node) {
+    if (!node.is_directory || node.name === 'node_modules') {
+      return []
+    }
+
+    return (new Project(node.path)).nodes
   }
 
   _sortByDirectory (array) {

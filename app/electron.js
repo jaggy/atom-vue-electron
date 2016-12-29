@@ -26,6 +26,8 @@ function createWindow () {
     frame: false
   })
 
+  BrowserWindow.addDevToolsExtension('/Users/jaggy/Library/Application Support/Google/Chrome/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/2.3.1_0')
+
   mainWindow.loadURL(config.url)
 
   if (process.env.NODE_ENV === 'development') {

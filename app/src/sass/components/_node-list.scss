@@ -1,0 +1,18 @@
+/** Collapse **/
+.node-list__children {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.node-item--expanded > .node-list__children {
+    max-height: unset;
+}
+
+/** Nested feel of things **/
+.node-list .node-item__link {
+    padding: 0.5rem $tree-view-item-side-padding;
+}
+
+.node-list__children .node-item__link {
+    padding: 0.5rem ($tree-view-item-side-padding * 2);
+}

@@ -17,11 +17,6 @@ export default {
     require('commands/BindKeyboardShortcuts.js')
   ],
 
-  components: {
-    'tree-view': require('components/TreeView'),
-    'workspace': require('components/Workspace')
-  },
-
   created () {
     this.openProject('/Users/jaggy/code/atom')
   }
