@@ -1,4 +1,4 @@
-const {globalShortcut} = require('electron').remote
+const { globalShortcut } = require('electron').remote
 
 module.exports = {
   mounted () {
@@ -8,6 +8,7 @@ module.exports = {
   methods: {
     bindKeyboardShortcuts () {
       globalShortcut.register('CommandOrControl+o', () => this.selectProject())
+      globalShortcut.register('Control+e', () => this.toggleTree())
     }
   }
 }

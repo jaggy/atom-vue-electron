@@ -3,9 +3,21 @@
 }
 
 .app > .tree-view {
-    width: 13.75rem;
+    overflow: auto;
+    width: 0;
 }
 
 .app > .workspace {
-    width: calc(100% - 13.75rem);
+    width: 100%;
+}
+
+.app.tree-view-open {
+    > .tree-view {
+        overflow: unset;
+        width: 13.75rem;
+    }
+
+    > .workspace {
+        width: calc(100% - 13.75rem);
+    }
 }
