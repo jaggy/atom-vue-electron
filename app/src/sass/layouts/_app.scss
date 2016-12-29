@@ -3,9 +3,9 @@
 }
 
 .app > .tree-view {
-    flex-basis: 13.75rem;
+    width: 13.75rem;
 }
 
 .app > .workspace {
-    flex-basis: calc(100% - 13.75rem);
+    width: calc(100% - 13.75rem);
 }
