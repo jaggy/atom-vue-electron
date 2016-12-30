@@ -19,6 +19,15 @@ const FILE = {
   ]
 }
 
+const EDIT = {
+  label: "Edit",
+  submenu: [
+    { label: "Undo", accelerator: "CommandOrControl+Z", click: (menuItem, window) => window.webContents.undo() },
+    { label: "Redo", accelerator: "CommandOrControl+Shift+Z", click: (menuItem, window) => window.webContents.redo() },
+    { type: "separator" },
+  ]
+}
+
 let VIEW = {
   label: "View",
   submenu: [
@@ -38,7 +47,14 @@ const PLUGINS = {
   ]
 }
 
-let template = [ATOM, FILE, VIEW, PLUGINS]
+const DEVELOPER = {
+  label: "Developer",
+  submenu: [
+    { label: "Open Dev Tools", accelerator: "CommandOrControl+Option+I", click: (menuItem, window) => window.webContents.toggleDevTools() }
+  ]
+}
+
+let template = [ATOM, FILE, EDIT, VIEW, PLUGINS, DEVELOPER]
 
 Menu.setApplicationMenu(Menu.buildFromTemplate(template))
 
