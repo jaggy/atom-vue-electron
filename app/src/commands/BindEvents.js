@@ -10,6 +10,7 @@ module.exports = {
     bindEvents () {
       ipc.on(events.TOGGLE_TREE, event => this.toggleTree())
       ipc.on(events.SELECT_PROJECT, event => this.selectProject())
+      ipc.on(events.CLOSE_CURRENT_FILE, event => this.closeCurrentFile())
     }
   }
 }

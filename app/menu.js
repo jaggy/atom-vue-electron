@@ -1,4 +1,4 @@
-const types = require('./event-types')
+const events = require('./event-types')
 const { app, dialog, Menu } = require('electron')
 
 const ATOM = {
@@ -13,9 +13,10 @@ const ATOM = {
 const FILE = {
   label: "File",
   submenu: [
-    { label: "Open Project", accelerator: "CommandOrControl+O", click: (menuItem, window) => window.webContents.send('SELECT_PROJECT') }
+    { label: "Open Project", accelerator: "CommandOrControl+O", click: (menuItem, window) => window.webContents.send(events.SELECT_PROJECT) },
+    { type: "separator" },
+    { label: "Close Current File", accelerator: "CommandOrControl+W", click: (menuItem, window) => window.webContents.send(events.CLOSE_CURRENT_FILE) }
   ]
-
 }
 
 let VIEW = {
@@ -31,7 +32,7 @@ const PLUGINS = {
     {
       label: "Tree View",
       submenu: [
-        { label: "Toggle", accelerator: "Control+E", click: (menuItem, window) => window.webContents.send('TOGGLE_TREE') }
+        { label: "Toggle", accelerator: "Control+E", click: (menuItem, window) => window.webContents.send(events.TOGGLE_TREE) }
       ]
     }
   ]

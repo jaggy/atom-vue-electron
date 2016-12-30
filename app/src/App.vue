@@ -19,6 +19,7 @@ export default {
   mixins: [
     require('commands/OpenProject.js'),
     require('commands/ToggleTreeView.js'),
+    require('commands/CloseCurrentFile.js'),
     require('commands/BindEvents.js')
   ],
 
