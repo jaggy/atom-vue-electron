@@ -1,3 +1,4 @@
+import events from '../../event-types'
 import { ipcRenderer as ipc } from 'electron'
 
 module.exports = {
@@ -7,8 +8,8 @@ module.exports = {
 
   methods: {
     bindEvents () {
-      ipc.on('TOGGLE_TREE', event => this.toggleTree())
-      ipc.on('SELECT_PROJECT', event => this.selectProject())
+      ipc.on(events.TOGGLE_TREE, event => this.toggleTree())
+      ipc.on(events.SELECT_PROJECT, event => this.selectProject())
     }
   }
 }
