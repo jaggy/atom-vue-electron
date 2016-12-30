@@ -12,7 +12,19 @@ export const openFile = ({ commit }, file) => {
     }
 
     commit(types.OPEN_FILE, file)
+    commit(types.ACTIVATE_FILE, file)
   })
+}
+
+export const closeFile = ({ state, commit }, removedFile) => {
+  let { files } = state.workspace
+
+  commit(
+    types.UPDATE_FILE_LIST,
+    files.filter(file => file !== removedFile)
+  )
+
+  commit(types.ACTIVATE_FILE, null)
 }
 
 export const openProject = ({ commit }, path) => {

@@ -14,10 +14,20 @@ const mutations = {
 
   [types.OPEN_FILE] (state, file) {
     if (!state.files.includes(file)) {
-      state.files.unshift(file)
+      state.files.push(file)
+    }
+  },
+
+  [types.ACTIVATE_FILE] (state, file = null) {
+    if (!file && state.files.length) {
+      file = state.files[0]
     }
 
     state.active = file
+  },
+
+  [types.UPDATE_FILE_LIST] (state, files) {
+    state.files = files
   },
 
   [types.CLEAR_ALL_FILES] (state) {

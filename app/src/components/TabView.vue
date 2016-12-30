@@ -3,14 +3,17 @@
         <ul class="tab-list">
             <li class="tab-item"
                 v-for="file in files">
+                <a class="tab-item__close" href="#"
+                   @click.prevent="close(file)">x</a>
+
                 <a class="tab-item__link" href="#"
-                   :class="{ 
-                       'tab-item__link--active': file === active_file 
+                   :class="{
+                       'tab-item__link--active': file === active_file
                    }"
                    @click.prevent="select(file)">
                     {{ file.name }}
                 </a>
-            </li>            
+            </li>
         </ul>
     </nav>
 </template>
@@ -27,6 +30,10 @@ export default {
   methods: {
     select (file) {
       this.$store.dispatch('openFile', file)
+    },
+
+    close (file) {
+      this.$store.dispatch('closeFile', file)
     }
   }
 }
