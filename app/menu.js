@@ -12,7 +12,7 @@ let template = [
   {
     label: "File",
     submenu: [
-      { label: "Open Project", accelerator: "CommandOrControl+O", click: (menuItem, window) => openProject(window) }
+      { label: "Open Project", accelerator: "CommandOrControl+O", click: (menuItem, window) => window.webContents.send('SELECT_PROJECT') }
     ]
   },
   {
@@ -36,12 +36,3 @@ let template = [
 
 Menu.setApplicationMenu(Menu.buildFromTemplate(template))
 
-function openProject (window) {
-  let directory = dialog.showOpenDialog({properties: ['openDirectory']})
-
-  if (!directory) {
-    return
-  }
-
-  window.webContents.send('OPEN_PROJECT', directory[0])
-}
