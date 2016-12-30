@@ -1,6 +1,15 @@
 .editor {
+    height: calc(100% - 2.5rem);
+}
+
+.CodeMirror {
+    background-color: color(black) !important;
+    height: 100%;
+    padding: 1rem;
+}
+
+.CodeMirror pre {
+    font-family: "Fira Code", Monaco, monospace;
     font-size: 14px;
     line-height: 1.9;
-    overflow: scroll;
-    padding: 1rem;
 }

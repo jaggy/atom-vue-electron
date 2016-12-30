@@ -4,6 +4,7 @@
   "description": "Atom Editor made with Vue.",
   "main": "electron.js",
   "dependencies": {
+    "codemirror": "^5.22.0",
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",
     "vue": "^2.0.1",

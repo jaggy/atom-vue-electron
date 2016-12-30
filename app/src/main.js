@@ -10,6 +10,11 @@ Vue.config.debug = true
 
 require('electron').remote.globalShortcut.unregisterAll()
 
+require('../node_modules/codemirror/mode/javascript/javascript.js')
+require('../node_modules/codemirror/mode/php/php.js')
+require('../node_modules/codemirror/mode/markdown/markdown.js')
+require('../node_modules/codemirror/keymap/vim.js')
+
 Vue.component('tree-view', require('components/TreeView'))
 Vue.component('workspace', require('components/Workspace'))
 Vue.component('node-list', require('components/NodeList'))

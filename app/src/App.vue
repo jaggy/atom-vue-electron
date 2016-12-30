@@ -38,13 +38,11 @@ export default {
         return
       }
 
-      this.$store.commit(types.OPEN_FILE, { name: 'untitled', data: null })
+      this.$store.commit(types.OPEN_FILE, { name: 'untitled', data: '', type: 'text' })
       this.$store.commit(types.ACTIVATE_FILE)
-    }
-  },
+    },
 
-  watch: {
-    active_file (file) {
+    updateTitle (file) {
       let title = 'untitled'
 
       if (file) {
@@ -56,6 +54,12 @@ export default {
       }
 
       document.title = title
+    }
+  },
+
+  watch: {
+    active_file (file) {
+      this.updateTitle(file)
     }
   }
 }
