@@ -19,7 +19,7 @@ export default {
   mixins: [
     require('commands/OpenProject.js'),
     require('commands/ToggleTreeView.js'),
-    require('commands/BindKeyboardShortcuts.js')
+    require('commands/BindEvents.js')
   ],
 
   computed: mapState({

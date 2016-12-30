@@ -2,7 +2,7 @@
 
 const electron = require('electron')
 const path = require('path')
-const { app, Menu } = electron
+const { app } = electron
 const BrowserWindow = electron.BrowserWindow
 
 let mainWindow
@@ -44,35 +44,9 @@ function createWindow () {
     mainWindow = null
   })
 
-  registerApplicationMenu()
+  require('./menu.js')
 
   console.log('mainWindow opened')
-}
-
-function registerApplicationMenu () {
-  let template = [
-    {
-      label: "Atom",
-      submenu: [
-        { label: "About Atom", selector: "orderFrontStandardAboutPanel:" },
-        { type: "separator" },
-        { label: "Quit", accelerator: "Command+Q", click: () => app.quit() }
-      ],
-    },
-    {
-      label: "Plugins",
-      submenu: [
-        {
-          label: "Tree View",
-          submenu: [
-            { label: "Toggle", accelerator: "Control+E", (menuItem, currentWindow) => { currentWindow.webContents.send('test') } }
-          ]
-        }
-      ]
-    }
-  ]
-
-  Menu.setApplicationMenu(Menu.buildFromTemplate(template))
 }
 
 app.on('ready', createWindow)
