@@ -1,8 +1,6 @@
 <template>
   <main class="app"
-        :class="{
-          'tree-view-open': tree.open
-        }">
+        :class="{ 'tree-view-open': tree.open }">
     <tree-view v-if="project"></tree-view>
 
     <workspace></workspace>
