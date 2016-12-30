@@ -23,11 +23,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   props: {
     node: Object,
     depth: Number
   },
+
+  computed: mapState({
+    active_file: state => state.workspace.active
+  }),
 
   data () {
     return { expanded: false }

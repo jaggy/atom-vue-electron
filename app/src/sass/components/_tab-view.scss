@@ -8,8 +8,8 @@
 
 .tab-item {
     font-size: 0.875rem;
+    min-width: 12.5rem;
     position: relative;
-    text-align: center;
 }
 
 .tab-item__close {
@@ -19,7 +19,7 @@
 
     position: absolute;
     top: 50%;
-    left: 0.75rem;
+    right: 0.75rem;
 }
 
 .tab-item--active .tab-item__close,
@@ -28,8 +28,10 @@
 }
 
 .tab-item__link {
-    display: block;
-    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding-left: 1rem;
 }
 
 .tab-item--active .tab-item__link,
