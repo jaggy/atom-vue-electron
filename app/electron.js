@@ -2,7 +2,7 @@
 
 const electron = require('electron')
 const path = require('path')
-const app = electron.app
+const { app, Menu } = electron
 const BrowserWindow = electron.BrowserWindow
 
 let mainWindow
@@ -23,7 +23,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
-    frame: false
+    // frame: false
   })
 
   BrowserWindow.addDevToolsExtension('/Users/jaggy/Library/Application Support/Google/Chrome/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/2.3.1_0')
@@ -44,7 +44,35 @@ function createWindow () {
     mainWindow = null
   })
 
+  registerApplicationMenu()
+
   console.log('mainWindow opened')
+}
+
+function registerApplicationMenu () {
+  let template = [
+    {
+      label: "Atom",
+      submenu: [
+        { label: "About Atom", selector: "orderFrontStandardAboutPanel:" },
+        { type: "separator" },
+        { label: "Quit", accelerator: "Command+Q", click: () => app.quit() }
+      ],
+    },
+    {
+      label: "Plugins",
+      submenu: [
+        {
+          label: "Tree View",
+          submenu: [
+            { label: "Toggle", accelerator: "Control+E", (menuItem, currentWindow) => { currentWindow.webContents.send('test') } }
+          ]
+        }
+      ]
+    }
+  ]
+
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template))
 }
 
 app.on('ready', createWindow)
