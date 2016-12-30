@@ -1,4 +1,4 @@
-import * as types from 'src/vuex/mutation-types'
+import events from '../../event-types'
 import { ipcRenderer as ipc } from 'electron'
 
 module.exports = {
@@ -8,8 +8,8 @@ module.exports = {
 
   methods: {
     bindEvents () {
-      ipc.on(types.TOGGLE_TREE, event => this.toggleTree())
-      ipc.on(types.OPEN_PROJECT, (event, path) => this.openProject(path))
+      ipc.on(events.TOGGLE_TREE, event => this.toggleTree())
+      ipc.on(events.SELECT_PROJECT, event => this.selectProject())
     }
   }
 }

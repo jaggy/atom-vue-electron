@@ -1,0 +1,4 @@
+module.exports = {
+  SELECT_PROJECT: 'SELECT_PROJECT',
+  TOGGLE_TREE: 'TOGGLE_TREE'
+}

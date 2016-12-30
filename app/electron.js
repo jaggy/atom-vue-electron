@@ -22,8 +22,7 @@ function createWindow () {
    */
   mainWindow = new BrowserWindow({
     height: 600,
-    width: 800,
-    // frame: false
+    width: 800
   })
 
   BrowserWindow.addDevToolsExtension('/Users/jaggy/Library/Application Support/Google/Chrome/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/2.3.1_0')
