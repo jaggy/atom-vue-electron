@@ -2,14 +2,14 @@
     <nav class="tab-view">
         <ul class="tab-list">
             <li class="tab-item"
+                :class="{
+                    'tab-item--active': file === active_file
+                }"
                 v-for="file in files">
-                <a class="tab-item__close" href="#"
-                   @click.prevent="close(file)">x</a>
+                <a class="tab-item__close close-button" href="#"
+                   @click.prevent="close(file)"></a>
 
                 <a class="tab-item__link" href="#"
-                   :class="{
-                       'tab-item__link--active': file === active_file
-                   }"
                    @click.prevent="select(file)">
                     {{ file.name }}
                 </a>

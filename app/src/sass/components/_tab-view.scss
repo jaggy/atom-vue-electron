@@ -7,14 +7,32 @@
 }
 
 .tab-item {
+    font-size: 0.875rem;
+    position: relative;
+    text-align: center;
+}
+
+.tab-item__close {
+    transform: scale(0) translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    transform-origin: top center;
+
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+}
+
+.tab-item--active .tab-item__close,
+.tab-item:hover .tab-item__close {
+    transform: scale(1) translateY(-50%);
 }
 
 .tab-item__link {
     display: block;
-    padding: 1rem;
+    padding: 1rem 3rem;
 }
 
-.tab-item__link--active,
+.tab-item--active .tab-item__link,
 .tab-item__link:hover {
     background-color: #005f60;
 }

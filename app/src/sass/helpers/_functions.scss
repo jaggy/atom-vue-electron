@@ -1,1 +1,38 @@
+$close-button-size: 20px;
+$close-button-width: 8px;
+$close-button-height: 2px;
 
+.close-button {
+    height: $close-button-size;
+    width: $close-button-size;
+    position: relative;
+    box-sizing: border-box;
+    line-height: $close-button-size;
+    display: inline-block;
+
+    &:before, &:after {
+        transform: rotate(-45deg);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -$close-button-height/2;
+        margin-left: -$close-button-width/2;
+        display: block;
+        height: $close-button-height;
+        width: $close-button-width;
+        background-color: #fff;
+        transition: all 0.2s ease-out;
+    }
+
+    &:after {
+        transform: rotate(45deg);
+    }
+
+    &:hover {
+
+        &:before, &:after {
+            transform: rotate(0deg);
+        }
+    }
+}
