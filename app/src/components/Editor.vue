@@ -1,6 +1,10 @@
 <template>
-  <div class="editor" ref="editor">
-    <!-- <pre v-if="file"><code>{{ file.data }}</code></pre> -->
+  <div class="editor">
+      <div class="writer" ref="editor" v-show="isTextBased()"></div>
+
+      <div class="previewer" v-show="!isTextBased()">
+          <img alt="" :src="file.path" />
+      </div>
   </div>
 </template>
 
@@ -33,6 +37,10 @@ export default {
 
       this.codemirror.setValue(file.data)
       this.codemirror.setOption('type', file.filetype)
+    },
+
+    isTextBased () {
+      return !['jpg', 'png', 'icons', 'ico'].includes(this.file.filetype)
     }
   },
 
