@@ -4,11 +4,23 @@ class Filetype
 {
   constructor () {
     this.reference = {
-      'Gulpfile.js': 'gulp',
-      'gulpfile.js': 'gulp',
-      '.gitignore': 'git',
+      'LICENSE.md': 'license',
+      'license.md': 'license',
       'md': 'markdown',
       'TODO': 'todo',
+      'log': 'text',
+
+      '.env': 'settings',
+
+      'Gulpfile.js': 'gulp',
+      'gulpfile.js': 'gulp',
+      'node_modules': 'npm',
+      '.gitignore': 'git',
+      '.gitattributes': 'git',
+
+      'ico': 'image',
+      'icns': 'image',
+
       'artisan': 'php',
       'composer.lock': 'php',
       'yarn.lock': 'javascript',

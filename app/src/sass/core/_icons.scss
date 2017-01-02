@@ -9,6 +9,7 @@
     text-decoration: none;
     text-transform: none;
 
+    font-size: 1.1rem;
     position: relative;
     top: 1px;
 }
@@ -424,4 +425,62 @@ $icons: (
 .icon-xml:before,
 .icon-html:before {
     color: color(orange);
+}
+
+.icon-illustrator:before,
+.icon-coffeescript:before,
+.icon-javascript:before,
+.icon-ejs:before,
+.icon-favicon:before,
+.icon-json:before,
+.icon-license:before,
+.icon-smarty:before {
+    color: color(yellow);
+}
+
+.icon-config:before,
+.icon-vala:before,
+.icon-clock:before,
+.icon-rust:before {
+    color: color(grey);
+}
+
+.icon-git:before,
+.icon-apple:before,
+.icon-text:before {
+    color: color(white);
+}
+
+.icon-sass:before,
+.icon-video:before,
+.icon-latex:before {
+    color: color(pink);
+}
+
+.icon-npm:before,
+.icon-cake_php:before,
+.icon-gulp:before,
+.icon-haml:before,
+.icon-jade:before,
+.icon-java:before,
+.icon-pdf:before,
+.icon-ruby:before {
+    color: color(red);
+}
+
+.icon-audio:before,
+.icon-csv:before,
+.icon-groovy:before,
+.icon-karma:before,
+.icon-liquid:before {
+    color: color(green);
+}
+
+.icon-image:before,
+.icon-php:before,
+.icon-yml:before,
+.icon-svg:before,
+.icon-puppet:before,
+.icon-haskell:before {
+    color: color(purple);
 }

@@ -41,7 +41,7 @@ export default {
 
   methods: {
     icon (node) {
-      if (!node.filetype) {
+      if (!node.filetype || node.is_directory) {
         return null
       }
 
