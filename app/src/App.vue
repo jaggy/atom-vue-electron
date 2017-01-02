@@ -29,7 +29,11 @@ export default {
   }),
 
   created () {
-    this.newFile()
+    if (process.env.NODE_ENV) {
+      this.openProject('/Users/jaggy/code/atom')
+    } else {
+      this.newFile()
+    }
   },
 
   methods: {

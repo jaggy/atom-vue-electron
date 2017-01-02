@@ -8,7 +8,7 @@ class Filetype
       'license.md': 'license',
       'md': 'markdown',
       'TODO': 'todo',
-      'log': 'text',
+      'log': 'default',
 
       '.env': 'settings',
 
