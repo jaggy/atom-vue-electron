@@ -16,6 +16,7 @@ require('../node_modules/codemirror/mode/markdown/markdown.js')
 require('../node_modules/codemirror/keymap/vim.js')
 
 Vue.component('tree-view', require('components/TreeView'))
+Vue.component('fuzzy-finder', require('components/FuzzyFinder'))
 Vue.component('workspace', require('components/Workspace'))
 Vue.component('node-list', require('components/NodeList'))
 Vue.component('node-item', require('components/NodeItem'))

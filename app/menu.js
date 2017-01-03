@@ -43,6 +43,12 @@ const PLUGINS = {
       submenu: [
         { label: 'Toggle', accelerator: 'Control+E', click: (menuItem, window) => window.webContents.send(events.TOGGLE_TREE) }
       ]
+    },
+    {
+      label: 'Fuzzy Finder',
+      submenu: [
+        { label: 'Toggle', accelerator: 'Control+P', click: (menuItem, window) => window.webContents.send(events.TOGGLE_FUZZY_FINDER) }
+      ]
     }
   ]
 }

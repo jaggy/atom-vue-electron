@@ -1,6 +1,8 @@
 <template>
   <main class="app"
         :class="{ 'tree-view-open': tree.open }">
+    <fuzzy-finder></fuzzy-finder>
+
     <tree-view v-if="project"></tree-view>
 
     <workspace></workspace>
@@ -25,7 +27,8 @@ export default {
   computed: mapState({
     tree: state => state['tree-view'],
     project: state => state.workspace.project,
-    active_file: state => state.workspace.active
+    active_file: state => state.workspace.active,
+    fuzzyfinder: state => state.workspace.fuzzyfinder
   }),
 
   created () {

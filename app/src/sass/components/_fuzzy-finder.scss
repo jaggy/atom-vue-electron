@@ -1,0 +1,48 @@
+$fuzzy-finder-width: 30rem;
+
+.fuzzy-finder__navigator {
+    background-color: rgba(255, 255, 255, 0.075);
+    padding: 0.5rem;
+    max-width: $fuzzy-finder-width;
+    width: 100%;
+}
+
+.fuzzy-finder__input {
+    background-color: color(black);
+    border: none;
+    color: white;
+    height: 2rem;
+    outline: none;
+    padding: 0 0.5rem;
+    width: 100%;
+}
+
+.fuzzy-finder__input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fuzzy-finder__files {
+    list-style: none;
+    max-width: $fuzzy-finder-width;
+    width: 100%;
+}
+
+.fuzzy-finder__file {
+    background-color: rgba(255, 255, 255, 0.075);
+    display: block;
+    padding: 1rem 0.5rem;
+}
+
+.fuzzy-finder__file:hover {
+    background-color: color(blue);
+}
+
+.fuzzy-finder__file-name {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.fuzzy-finder__file-path {
+    font-size: .8125rem;
+    opacity: 0.6;
+}

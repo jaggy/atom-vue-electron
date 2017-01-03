@@ -3,6 +3,10 @@ body {
     color: color(white);
 }
 
+input, textarea {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 a {
     color: color(white);
     text-decoration: none;

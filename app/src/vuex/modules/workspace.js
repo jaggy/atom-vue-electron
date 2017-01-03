@@ -4,7 +4,10 @@ import Project from 'src/Project'
 const state = {
   project: null,
   files: [],
-  active: null
+  active: null,
+  fuzzyfinder: {
+    open: false
+  }
 }
 
 const mutations = {

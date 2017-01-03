@@ -8,6 +8,7 @@ class Project
     this.directory = directory
     this.name = path.basename(directory)
     this.nodes = this.nodes()
+    this.index = this._flatten(this.nodes)
   }
 
   nodes () {
@@ -54,6 +55,16 @@ class Project
 
   _isDirectory (node) {
     return fs.lstatSync(node).isDirectory()
+  }
+
+  _flatten (array) {
+    return array.reduce((flat, toFlatten) => {
+      return flat.concat(
+        toFlatten.is_directory
+          ? this._flatten(toFlatten.nodes)
+          : toFlatten
+      )
+    }, [])
   }
 }
 
