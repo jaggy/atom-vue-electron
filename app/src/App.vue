@@ -1,7 +1,7 @@
 <template>
   <main class="app"
         :class="{ 'tree-view-open': tree.open }">
-    <fuzzy-finder></fuzzy-finder>
+    <fuzzy-finder v-show="fuzzyfinder" ref="fuzzyfinder"></fuzzy-finder>
 
     <tree-view v-if="project"></tree-view>
 
@@ -20,6 +20,7 @@ export default {
   mixins: [
     require('commands/OpenProject.js'),
     require('commands/ToggleTreeView.js'),
+    require('commands/ToggleFuzzyFinder.js'),
     require('commands/CloseCurrentFile.js'),
     require('commands/BindEvents.js')
   ],
@@ -28,7 +29,7 @@ export default {
     tree: state => state['tree-view'],
     project: state => state.workspace.project,
     active_file: state => state.workspace.active,
-    fuzzyfinder: state => state.workspace.fuzzyfinder
+    fuzzyfinder: state => state.workspace.fuzzyfinder.open
   }),
 
   created () {
@@ -67,6 +68,14 @@ export default {
   watch: {
     active_file (file) {
       this.updateTitle(file)
+    },
+
+    fuzzyfinder (state) {
+      if (!state) {
+        return
+      }
+
+      this.$refs.fuzzyfinder.$refs.search.focus()
     }
   }
 }

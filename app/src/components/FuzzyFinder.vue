@@ -1,12 +1,13 @@
 <template>
   <nav class="fuzzy-finder">
     <div class="fuzzy-finder__navigator">
-      <input class="fuzzy-finder__input" type="text" v-model="search">
+     <input class="fuzzy-finder__input" type="text"
+            v-model="search" ref="search">
     </div>
 
     <ul class="fuzzy-finder__files">
       <li v-for="file in files">
-        <a href="#" class="fuzzy-finder__file">
+        <a href="#" @click="open(file)" class="fuzzy-finder__file">
           <h3 class="fuzzy-finder__file-name">{{ file.name }}</h3>
           <small class="fuzzy-finder__file-path">{{ file.path }}</small>   
         </a>
@@ -16,6 +17,7 @@
 </template>
 
 <script>
+import * as types from 'src/vuex/mutation-types'
 import { mapState } from 'vuex'
 
 export default {
@@ -41,13 +43,10 @@ export default {
   },
 
   methods: {
-    find (keyword) {
-    }
-  },
+    open (file) {
+      this.$store.dispatch('openFile', file)
 
-  watch: {
-    search (keyword) {
-      this.find(keyword)
+      this.$store.commit(types.TOGGLE_FUZZY_FINDER)
     }
   }
 }

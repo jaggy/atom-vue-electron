@@ -1,7 +1,7 @@
 $fuzzy-finder-width: 30rem;
 
 .fuzzy-finder__navigator {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: #272a2c;
     padding: 0.5rem;
     max-width: $fuzzy-finder-width;
     width: 100%;
@@ -28,7 +28,7 @@ $fuzzy-finder-width: 30rem;
 }
 
 .fuzzy-finder__file {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: #272a2c;
     display: block;
     padding: 1rem 0.5rem;
 }

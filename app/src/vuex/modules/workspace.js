@@ -36,6 +36,10 @@ const mutations = {
   [types.CLEAR_ALL_FILES] (state) {
     state.files = []
     state.active = null
+  },
+
+  [types.TOGGLE_FUZZY_FINDER] (state) {
+    state.fuzzyfinder.open = !state.fuzzyfinder.open
   }
 }
 
